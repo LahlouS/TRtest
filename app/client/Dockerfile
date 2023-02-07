@@ -4,7 +4,11 @@ FROM		node:19-alpine
 
 WORKDIR		/app
 
-COPY		. /app/
+RUN			chown -R node:node /app
+
+USER		node
+
+COPY		--chown=node:node . /app/
 
 RUN			npm --silent install 
 
