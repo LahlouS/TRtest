@@ -71,3 +71,4 @@ networks:
 volumes:
   db:
     driver: local
+    name: postgres

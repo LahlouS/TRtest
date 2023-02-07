@@ -29,7 +29,9 @@ export const Transcendence = () => {
 			<Typography variant="h6" align="justify" padding="50px">
 					Your local volume for postgres database is handle by docker and persitent	:
 					<br/>
-					-	The database already is connected to nestjs server ( view file "/app/server/src/app.module.ts")
+					-	The database is already connected to nestjs server ( view file "/app/server/src/app.module.ts")
+					<br/>
+					-	You can remove persitent data volume with command: "docker volume rm postgres"
 			</Typography>
 		</>
 	)
