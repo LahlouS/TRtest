@@ -16,7 +16,8 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./app/client:/app
+      - ./app/client/src:/app/src
+      - ./app/client/public:/app/public
     restart: always
     networks:
       - webapp
@@ -36,7 +37,7 @@ services:
     ports:
       - "5500:3000"
     volumes:
-      - ./app/server:/app
+      - ./app/server/src:/app/src
     restart: always
     networks:
       - webapp
@@ -54,7 +55,7 @@ services:
     expose:
       - "5432"
     volumes:
-      - ./app/database/data:/var/lib/postgresql/data
+      - db:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "psql $POSTGRES_DB -U $POSTGRES_USER -c 'SELECT 1' || exit 1"]
       interval: 0.5s
@@ -66,3 +67,7 @@ networks:
     name: webapp
   database:
     name: database
+
+volumes:
+  db:
+    driver: local

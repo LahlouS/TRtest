@@ -2,8 +2,6 @@
 
 FROM		node:19-alpine
 
-RUN			npm i -g @nestjs/cli
-
 WORKDIR		/app
 
 COPY		. /app/
