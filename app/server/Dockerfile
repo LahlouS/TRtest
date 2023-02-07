@@ -2,11 +2,13 @@
 
 FROM		node:19-alpine
 
+RUN			npm i -g @nestjs/cli
+
 WORKDIR		/app
 
 COPY		. /app/
 
-RUN			npm --silent install 
+RUN			npm install 
 
 EXPOSE		3000
 
