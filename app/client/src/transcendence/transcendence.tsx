@@ -15,7 +15,7 @@ export const Transcendence = () => {
 					Welcome to your first own full stack project ...
 			</Typography>
 			<Typography variant="h6" align="justify" padding="50px">
-					Yours local volumes for client ( react == localhost:3000 ) are "./app/client/src" and ./app/server/public"	:
+					Yours local volumes for client ( react == localhost:3000 ) are "./app/client/src" and ./app/client/public"	:
 					<br/>
 					-	you can work on directory "./app/client/src/transcendence"
 					<br/>
