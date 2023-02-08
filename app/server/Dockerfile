@@ -6,7 +6,7 @@ WORKDIR		/app
 
 COPY		. /app/
 
-RUN			npm install 
+RUN			npm --silent install 
 
 EXPOSE		3000
 
